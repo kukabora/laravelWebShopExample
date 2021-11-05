@@ -9,6 +9,10 @@ body {
     padding: 1%;
 }
 
+.big-spacing-text {
+    letter-spacing: 4px;
+}
+
 .navbar-element-wrapper {
     padding: 20%;
 }
@@ -72,4 +76,26 @@ body {
     .button-50 {
         padding: 5% 25%;
     }
+}
+
+.custom-btn {
+    width: 100%;
+    font-size: calc(0.5vw + 0.8em);
+    background-color: #000;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5%;
+    transition: 0.4s;
+}
+
+.active-custom-btn {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5%;
+    width: 100%;
+    font-size: calc(0.5vw + 0.8em);
+    background-color: white;
+    font-weight: 700;
+    color: black;
+    transition: 0.4s;
 }
