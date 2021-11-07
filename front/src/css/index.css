@@ -11,3 +11,23 @@
     display: inline-block;
     padding: 4% 5%!important;
 }
+
+.backpack-photo {
+    width: 100%;
+}
+
+.find-out-btn {
+    font-size: calc(1vw + 1em);
+    margin: 5%;
+    padding: 2%;
+}
+
+.find-out-btn:hover {
+    font-weight: 600;
+    color: black !important;
+    background-color: white !important;
+}
+
+.good-wrapper {
+    margin-top: 5%;
+}

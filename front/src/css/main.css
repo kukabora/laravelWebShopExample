@@ -44,7 +44,7 @@ body {
     line-height: 20px;
     margin: 0 1% 2% 0;
     overflow: visible;
-    padding: 12px 40px;
+    padding: 15px 40px;
     text-align: center;
     text-transform: none;
     touch-action: manipulation;
@@ -74,7 +74,7 @@ body {
 
 @media (min-width: 768px) {
     .button-50 {
-        padding: 5% 25%;
+        padding: 10% 25%;
     }
 }
 
