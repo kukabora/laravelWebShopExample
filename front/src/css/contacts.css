@@ -10,7 +10,7 @@
 }
 
 .custom-input::placeholder {
-    color: black !important;
+    color: rgb(99, 99, 99) !important;
 }
 
 .textarea-custom-input {
