@@ -1,0 +1,19 @@
+.custom-input {
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: calc(1vw + 1em);
+    font-weight: 600;
+}
+
+.form-size-30 {
+    height: 100%;
+}
+
+.custom-input::placeholder {
+    color: black !important;
+}
+
+.textarea-custom-input {
+    width: 100%;
+    min-height: 200px;
+}
