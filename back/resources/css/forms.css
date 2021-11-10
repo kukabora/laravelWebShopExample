@@ -1,0 +1,56 @@
+.logo-form {
+    aspect-ratio: 1.5;
+    width: 100%;
+}
+
+.authentication-form-container {
+    position: relative;
+    padding: 5%;
+}
+
+.back-button {
+    color: grey;
+    font-size: calc(1vw + 1em);
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.form-container {
+    padding: 10%;
+}
+
+.form-custom-control {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.custom-input:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important
+}
+
+.submitting-button {
+    background-color: rgb(27, 27, 27);
+    font-size: calc(1vw + 1em);
+    margin: 5%;
+}
+
+.logo-container {
+    margin-top: 10vw;
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):before {
+    border-right: 2px solid white !important;
+    border-bottom: 2px solid white !important;
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: 2px solid black !important;
+    background-color: black !important;
+}
+
+[type="checkbox"].filled-in.tabbed:checked:focus+span:not(.lever):after {
+    background-color: black !important;
+    border-color: black !important;
+}

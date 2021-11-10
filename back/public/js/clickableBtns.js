@@ -1,0 +1,16 @@
+let clickableBtns = document.querySelectorAll(".clickable")
+clickableBtns.forEach(btn => btn.onclick = (e) => {
+    let btns = document.querySelectorAll(".clickable")
+    btns.forEach(btt => {
+        btt.classList.remove("black-text")
+        btt.classList.remove("active-custom-btn")
+        btt.classList.add('white-text')
+        btt.classList.add("custom-btn")
+    })
+    e.target.classList.add("black-text")
+    e.target.classList.add("active-custom-btn")
+    console.log(e.target.classList)
+    e.target.classList.remove('white-text')
+    e.target.classList.remove("custom-btn")
+    console.log(e.target.classList)
+})
