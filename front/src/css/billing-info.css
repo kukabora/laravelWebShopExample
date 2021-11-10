@@ -1,0 +1,78 @@
+.info-header {
+    font-weight: 600;
+    font-size: calc(1vw + 1em) !important;
+}
+
+.billing-adress-input {
+    font-family: "Oswald";
+}
+
+.input-label {
+    font-size: calc(0.8vw + 0.8em);
+}
+
+.card-body {
+    font-family: "Oswald";
+    position: relative;
+    width: 100%;
+    background-color: rgb(133, 133, 133);
+    border-radius: 15px;
+    aspect-ratio: 1.57;
+}
+
+.name-field {
+    position: absolute;
+    top: 85%;
+    width: 40%;
+    left: 5%;
+    height: 10%;
+    font-size: calc(0.7vw + 0.7em);
+}
+
+.valid-thru-field {
+    position: absolute;
+    top: 70%;
+    width: 20%;
+    left: 10%;
+    height: 14%;
+    color: black;
+    font-family: "Oswald";
+    font-size: calc(0.8vw + 0.8em);
+}
+
+.card-input::placeholder {
+    color: rgb(87, 87, 87);
+}
+
+.card-info {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.magnetize-line {
+    background-color: black;
+    height: 20%;
+    left: 0%;
+    top: 8%;
+    position: absolute;
+    width: 100%;
+}
+
+.card-input {
+    font-family: "Oswald";
+    color: black;
+    font-size: calc(0.8vw + 0.8em);
+}
+
+.card-input:focus {
+    outline: none;
+}
+
+.card-number-input {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 5%;
+    height: 17%;
+}
