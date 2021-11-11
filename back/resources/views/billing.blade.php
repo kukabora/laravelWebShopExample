@@ -17,34 +17,36 @@
         <div class="row navigation-panel">
             <div class=" col s2 hide-on-small-and-down navigation-element valign-wrapper ">
                 <div class="navbar-element-wrapper vertical-align">
-                    <a href="contribute.html" class="button-50">Contribute</a>
+                    <a href="contribute" class="button-50">Contribute</a>
                 </div>
             </div>
             <div class=" col s3 hide-on-small-and-down navigation-element valign-wrapper ">
                 <div class="navbar-element-wrapper vertical-align">
-                    <a href="contacts.html" class="button-50">Contact us</a>
+                    <a href="contacts" class="button-50">Contact us</a>
                 </div>
             </div>
             <div class="col s12 m4 center-align">
                 <img src="{{ asset('img/logo.png') }}" alt="" class="logo" />
             </div>
-
-            <!-- <div class=" col s2 hide-on-small-and-down navigation-element valign-wrapper ">
+            @guest
+            <div class=" col s2 hide-on-small-and-down navigation-element valign-wrapper ">
                 <div class="navbar-element-wrapper vertical-align">
-                    <a href="sign-in.html" class="button-50">Sign in</a>
+                    <a href="auth/login" class="button-50">Sign in</a>
                 </div>
             </div>
             <div class=" col s3 hide-on-small-and-down navigation-element valign-wrapper ">
                 <div class="navbar-element-wrapper vertical-align">
-                    <a href="sign-up.html" class="button-50">Sign up</a>
+                    <a href="auth/register" class="button-50">Sign up</a>
                 </div>
-            </div> -->
+            </div>
+            @endguest
+            @auth
             <div class="col s2"></div>
             <div class=" col s3 hide-on-small-and-down navigation-element valign-wrapper ">
                 <div class="navbar-element-wrapper vertical-align">
                     <a href="#" class="button-50 dropdown-trigger" data-target="dropdown1">My cabinet<i class="material-icons dropdown-icon">arrow_drop_down</i></a>
                     <ul id='dropdown1' class='dropdown-content black white-text content'>
-                        <li class="dropdown-link-item"><a href="cart.html" class="dropdown-link">My cart <i class="material-icons right">shopping_cart</i></a></li>
+                        <li class="dropdown-link-item"><a href="cart" class="dropdown-link">My cart <i class="material-icons right">shopping_cart</i></a></li>
                         <li class="dropdown-link-item"><a href="#!" class="dropdown-link">My orders <i class="material-icons right">favorite_border</i></a></li>
                         <li class="dropdown-link-item">
                             <a href="#!" class="dropdown-link">Billing info <i class="material-icons right">info_outline</i></a>
@@ -56,6 +58,7 @@
                     </ul>
                 </div>
             </div>
+            @endauth
             <br />
         </div>
     </div>

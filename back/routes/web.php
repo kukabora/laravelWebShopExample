@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
+use App\Http\Controllers\PageRendererController;
+use App\Http\Controllers\AuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,14 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('/', [MainController::class, 'mainPage']);
+Route::get('/', [PageRendererController::class, 'mainPage']);
+Route::get('/cart', [PageRendererController::class, 'cartPage']);
+Route::get('/good', [PageRendererController::class, 'goodPage']);
+Route::get('/billing', [PageRendererController::class, 'billingPage']);
+Route::get('/auth/register', [PageRendererController::class, 'signUpPage']);
+Route::get('/auth/login', [PageRendererController::class, 'signInPage']);
+Route::get('/contacts', [PageRendererController::class, 'contactsPage']);
+
+Route::post('auth/newUserRegister', [AuthenticationController::class, 'newUserRegister']);
+Route::post('auth/logining', [AuthenticationController::class, 'logining']);
 

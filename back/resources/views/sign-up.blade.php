@@ -15,7 +15,7 @@
 <body>
 
     <div class="authentication-form-container">
-        <a href="index.html" class="text-grey back-button big-spacing-text"> <i class="material-icons">chevron_left</i>Back</a>
+        <a href="indexl" class="text-grey back-button big-spacing-text"> <i class="material-icons">chevron_left</i>Back</a>
         <div class="row">
             <div class="col s12 m7" style="position: relative;">
                 <div class="logo-container" style="margin-top: 0%;">
@@ -25,11 +25,12 @@
             <div class="col s12 m5 center-align form-custom-control">
                 <h3 class="white-text big-spacing-text">Fill the form below</h3>
                 <form style="padding: 5%; display: block;">
+                    {{ csrf_field() }}
                     <div class="input-field">
-                        <input type="text" placeholder="Login" class="thin-writing white-text custom-input" />
+                        <input name="login" type="text" placeholder="Login" class="thin-writing white-text custom-input" />
                     </div>
                     <div class="input-field">
-                        <input type="password" placeholder="Password" class="thin-writing white-text custom-input" />
+                        <input name="password" type="password" placeholder="Password" class="thin-writing white-text custom-input" />
                     </div>
                     <p>
                         <label>
