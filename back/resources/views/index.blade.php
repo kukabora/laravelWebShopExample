@@ -28,8 +28,8 @@
             <div class="col s12 m4 center-align">
                 <img src="{{ asset('img/logo.png') }}" alt="" class="logo" />
             </div>
-
-            <!-- <div class=" col s2 hide-on-small-and-down navigation-element valign-wrapper ">
+            @guest
+            <div class=" col s2 hide-on-small-and-down navigation-element valign-wrapper ">
                 <div class="navbar-element-wrapper vertical-align">
                     <a href="sign-in.html" class="button-50">Sign in</a>
                 </div>
@@ -38,7 +38,9 @@
                 <div class="navbar-element-wrapper vertical-align">
                     <a href="sign-up.html" class="button-50">Sign up</a>
                 </div>
-            </div> -->
+            </div>
+            @endguest
+            @auth
             <div class="col s2"></div>
             <div class=" col s3 hide-on-small-and-down navigation-element valign-wrapper ">
                 <div class="navbar-element-wrapper vertical-align">
@@ -56,6 +58,7 @@
                     </ul>
                 </div>
             </div>
+            @endauth
             <br />
         </div>
     </div>

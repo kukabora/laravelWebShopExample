@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/materialize.css" />
-    <link rel="stylesheet" href="src/css/good.css" />
-    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('css/materialize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/good.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
     <title>Document</title>
 </head>
 
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col s12 m4 center-align">
-                <img src="src/img/logo.png" alt="" class="logo" />
+                <img src="{{ asset('img/logo.png') }}" alt="" class="logo" />
             </div>
 
             <!-- <div class=" col s2 hide-on-small-and-down navigation-element valign-wrapper ">
@@ -62,7 +62,7 @@
 
     <div class="row">
         <div class="col s12 m6">
-            <img src="media/img/backpacks/OGIO SOHO WOMEN’S BACKPACK – YELLOW - 960x960.png" class="backpack-photo left" alt="" />
+            <img src="{{ asset('media/img/backpacks/OGIO SOHO WOMEN’S BACKPACK – YELLOW - 960x960.png') }}" class="backpack-photo left" alt="" />
         </div>
         <div class="col s12 m6 white-text">
             <div class="container">
@@ -72,7 +72,7 @@
                 </h6>
                 <div class="price-and-rating-section">
                     <span class="price left"><s>$699</s> $559</span>
-                    <img src="src/img/rating.png" alt="" class="right rating" />
+                    <img src="{{ asset('img/rating.png') }}" alt="" class="right rating" />
                     <span class="grey-text right amount-of-rates">1,424 reviews</span>
                 </div>
                 <br />
@@ -185,8 +185,8 @@
         </div>
       </div>
     </footer>
-    <script src="src/js/clickableBtns.js"></script>
-    <script src="src/js/materialize.js"></script>
-    <script src="src/js/dropdown.js"></script>
+    <script src="{{ asset('js/clickableBtns.js') }}"></script>
+    <script src="{{ asset('js/materialize.js') }}"></script>
+    <script src="{{ asset('js/dropdown.js') }}"></script>
   </body>
 </html>

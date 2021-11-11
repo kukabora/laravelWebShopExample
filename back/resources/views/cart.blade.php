@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/materialize.css" />
-    <link rel="stylesheet" href="src/css/index.css" />
-    <link rel="stylesheet" href="src/css/cart.css" />
-    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('css/materialize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/cart.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
     <title>Document</title>
 </head>
 
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="col s12 m4 center-align">
-                <img src="src/img/logo.png" alt="" class="logo" />
+                <img src="{{ asset('img/logo.png') }}" alt="" class="logo" />
             </div>
 
             <!-- <div class=" col s2 hide-on-small-and-down navigation-element valign-wrapper ">
@@ -85,7 +85,7 @@
                 <div class="row cart-element valign-wrapper">
                     <div class="col s12 m3">
                         <a href="good.html">
-                            <img src="media/img/backpacks/Backpack Outdoor - 960x960 (2).png" alt="" class="preview" />
+                            <img src="{{ asset('media/img/backpacks/Backpack Outdoor - 960x960 (2).png') }}" alt="" class="preview" />
                         </a>
                     </div>
                     <div class="col s12 m3 white-text">
@@ -106,7 +106,7 @@
                 <div class="row cart-element valign-wrapper">
                     <div class="col s12 m3">
                         <a href="good.html">
-                            <img src="media/img/backpacks/Backpack Outdoor - 960x960 (2).png" alt="" class="preview" />
+                            <img src="{{ asset('media/img/backpacks/Backpack Outdoor - 960x960 (2).png') }}" alt="" class="preview" />
                         </a>
                     </div>
                     <div class="col s12 m3 white-text">
@@ -127,7 +127,7 @@
                 <div class="row cart-element valign-wrapper">
                     <div class="col s12 m3">
                         <a href="good.html">
-                            <img src="media/img/backpacks/Backpack Outdoor - 960x960 (2).png" alt="" class="preview" />
+                            <img src="{{ asset('media/img/backpacks/Backpack Outdoor - 960x960 (2).png') }}" alt="" class="preview" />
                         </a>
                     </div>
                     <div class="col s12 m3 white-text">
@@ -250,8 +250,8 @@
         </div>
       </div>
     </footer>
-    <script src="src/js/clickableBtns.js"></script>
-    <script src="src/js/materialize.js"></script>
-    <script src="src/js/dropdown.js"></script>
+    <script src="{{ asset('js/clickableBtns.js') }}"></script>
+    <script src="{{ asset('js/materialize.js') }}"></script>
+    <script src="{{ asset('js/dropdown.js') }}"></script>
   </body>
 </html>

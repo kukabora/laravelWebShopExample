@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/materialize.css" />
-    <link rel="stylesheet" href="src/css/billing-info.css" />
-    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('css/materialize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/billing-info.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
     <title>Document</title>
 </head>
 
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col s12 m4 center-align">
-                <img src="src/img/logo.png" alt="" class="logo" />
+                <img src="{{ asset('img/logo.png') }}" alt="" class="logo" />
             </div>
 
             <!-- <div class=" col s2 hide-on-small-and-down navigation-element valign-wrapper ">
@@ -191,8 +191,8 @@
         </div>
       </div>
     </footer>
-    <script src="src/js/materialize.js"></script>
-    <script src="src/js/clickableBtns.js"></script>
-    <script src="src/js/collapsible.js"></script>
+    <script src="{{ asset('js/materialize.js') }}"></script>
+    <script src="{{ asset('js/clickableBtns.js') }}"></script>
+    <script src="{{ asset('js/collapsible.js') }}"></script>
   </body>
 </html>

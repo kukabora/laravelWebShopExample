@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/materialize.css">
-    <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/forms.css">
+    <link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col s12 m7" style="position: relative;">
                 <div class="logo-container" style="margin-top: 0%;">
-                    <img src="src/img/logo.png" alt="" class="logo-form">
+                    <img src="{{ asset('img/logo.png') }}" alt="" class="logo-form">
                 </div>
             </div>
             <div class="col s12 m5 center-align form-custom-control">
@@ -69,7 +69,7 @@
             </div>
         </div>
     </footer>
-    <script src="src/js/clickableBtns.js">
+    <script src="{{ asset('js/clickableBtns.js') }}">
     </script>
 </body>
 
