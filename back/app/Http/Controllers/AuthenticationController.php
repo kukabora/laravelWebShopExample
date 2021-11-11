@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthenticationController extends Controller
 {
@@ -21,7 +23,7 @@ class AuthenticationController extends Controller
             'lname' => $lname,
             'email' => $email,
             'login' => $login,
-            'password' => $password,
+            'password' => Hash::make($password),
             'country' => $country
         ]);
         return redirect('auth/login');
@@ -30,6 +32,11 @@ class AuthenticationController extends Controller
     public function logining(Request $request){
         $login = $request->input("login");
         $password = $request->input("password");
-        return redirect('');
+        if (Auth::attempt(['email' => $login, 'password' => $password])) {
+            return redirect('');
+        }
+        else {
+            return back()->withInput(["err" => 'invalid login or password']);
+        }
     }
 }

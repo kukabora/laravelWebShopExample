@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BillingInfo extends Model
 {
-    protected $table = 'billingInfos';
+    protected $table = 'billinginfos';
     protected $fillable = [
         'fname',
         'lname',

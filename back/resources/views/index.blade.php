@@ -74,38 +74,18 @@
             </div>
         </div>
     </div>
-    <div class="row good-wrapper">
-        <div class="col s12 m6 white-text">
-            <div class="container white-text">
-                <h1>Best of the best for hiking!</h1>
-                <h6>
-                    If you are interested in climbing mountains our just a pedestrian tourism, you should check out this new backpack from "Scott Black". It can hold up to 80 liters, has many different (and also, hidden) pockets and waterproof. Outer material is polyester,
-                    which makes you sure that your important things will not become wet during your journey.
-                </h6>
-                <h4>Price: <s>599$</s> 400$</h4>
-                <h4>Manufacturer: Scott Black</h4>
-                <h4>Country: USA</h4>
-                <br />
-                <a href="#" class="custom-btn white-text find-out-btn">
-            Find out more!
-          </a>
-            </div>
-        </div>
-        <div class="col s12 m6">
-            <img src="{{ asset('media/img/backpacks/Scott Black Backpack - 960x960.png') }}" class="backpack-photo right" alt="" />
-        </div>
-    </div>
-    <div class="row good-wrapper">
+    @if ($goods)
+    @foreach ($goods as $good)
+    <div class="row">
         <div class="col s12 m6 white-text push-l6">
-            <div class="container white-text">
-                <h1>Casual modern insanity.</h1>
+            <div class="container">
+                <h1>{{$good->title}}</h1>
                 <h6>
-                    The most popular backpack on our site. Simplicity and modern beauty. If you are looking for something you can carry your things in, that is the best option you could possibly have. Kataiga developed the most comfortable to wear backpack with huge volume,
-                    section for your laptop and perfect high-quality furniture to serve you in a long term.
+                    {{$good->good_description}}
                 </h6>
-                <h4>Price: <s>399$</s> 200$</h4>
-                <h4>Manufacturer: Kataiga</h4>
-                <h4>Country: Taiwan</h4>
+                <h4>Price: {{$good->price}}$</h4>
+                <h4>Manufacturer: Scott Black</h4>
+                <h4>Country: England</h4>
                 <br />
                 <a href="#" class="custom-btn white-text find-out-btn">
             Find out more!
@@ -113,72 +93,13 @@
             </div>
         </div>
         <div class="col s12 m6 pull-l6">
-            <img src="{{ asset('media/img/backpacks/Backpack Outdoor - 960x960.png') }}" class="backpack-photo left" alt="" />
+            <img src="{{ url('storage/app/public/goodsImages/'.$good->image_field) }}" class="backpack-photo left mirrored" alt="" />
         </div>
     </div>
-    <div class="row good-wrapper">
-        <div class="col s12 m6 white-text">
-            <div class="container white-text">
-                <h1>Journey-maker: Scott Black</h1>
-                <h6>
-                    Scott Black is widely known company that is strongly related for their high-quality sportswear, and it has a reasons for it. Backpacks, tools, tents and a lot of other things. This beauty is their new-product, called "Scott Black mountain king": new-era
-                    backpack to satisfy all of your dreams about an action journey straight to the mountains.
-                </h6>
-                <h4>Price: <s>849$</s> 759$</h4>
-                <h4>Manufacturer: Scott Black</h4>
-                <h4>Country: China</h4>
-                <br />
-                <a href="#" class="custom-btn white-text find-out-btn">
-            Find out more!
-          </a>
-            </div>
-        </div>
-        <div class="col s12 m6">
-            <img src="{{ asset('media/img/backpacks/Backpack Outdoor - 960x960 (2).png') }}" class="backpack-photo right" alt="" />
-        </div>
-    </div>
+    @endforeach
+    @else
 
-    <div class="row">
-        <div class="col s12 m6 white-text push-l6">
-            <div class="container">
-                <h1>Stylish revolution</h1>
-                <h6>
-                    Do you like to make an unexplainable affection on your surroundings? Then, this bag is for you. Let us introduce you to OGIO SOHO WOMEN's BACKPACK in yellow performance. Bright, aesthetic and cool bag to extend your wardrobe (and carry your things from
-                    place to place).
-                </h6>
-                <h4>Price: <s>849$</s> 759$</h4>
-                <h4>Manufacturer: OGIO SOHO</h4>
-                <h4>Country: UK</h4>
-                <br />
-                <a href="#" class="custom-btn white-text find-out-btn">
-            Find out more!
-          </a>
-            </div>
-        </div>
-        <div class="col s12 m6 pull-l6">
-            <img src="{{ asset('media/img/backpacks/OGIO SOHO WOMEN’S BACKPACK – YELLOW - 960x960.png') }}" class="backpack-photo left" alt="" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 white-text">
-            <div class="container">
-                <h1>Aesthetics choise</h1>
-                <h6>
-                    Strict and yet complex design of this backpack is just breathtaken. After you wear it once, you will be never bying backpacks from other companies. Take a look at it's stripes and quality. What a wonderful product.
-                </h6>
-                <h4>Price: <s>699$</s> 359$</h4>
-                <h4>Manufacturer: Salewa Matric</h4>
-                <h4>Country: USA</h4>
-                <br />
-                <a href="#" class="custom-btn white-text find-out-btn">
-            Find out more!
-          </a>
-            </div>
-        </div>
-        <div class="col s12 m6">
-            <img src="{{ asset('media/img/backpacks/Salewa Matric 15 Backpack - 960x960.png') }}" class="backpack-photo right" alt="" />
-        </div>
-    </div>
+    @endif
     <div class="row">
         <div class="col s12 m6 white-text push-l6">
             <div class="container">

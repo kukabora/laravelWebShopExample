@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Good;
 
 class PageRendererController extends Controller
 {
     public function mainPage(Request $req){
-        return view('index');
+        $goods = Good::all();
+        return view('index', ['goods' => $goods]);
     }
     public function cartPage(Request $req){
         return view('cart');

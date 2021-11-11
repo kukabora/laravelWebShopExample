@@ -23,11 +23,15 @@
                 </div>
             </div>
             <div class="col s12 m5 center-align form-custom-control">
+                @if (old("err"))
+                    <h3 class="red-text big-spacing-text">Invalid login or password</h3>
+                @else
                 <h3 class="white-text big-spacing-text">Fill the form below</h3>
-                <form style="padding: 5%; display: block;">
+                @endif
+                <form style="padding: 5%; display: block;" method="POST" action="logining">
                     {{ csrf_field() }}
                     <div class="input-field">
-                        <input name="login" type="text" placeholder="Login" class="thin-writing white-text custom-input" />
+                        <input name="login" type="email" placeholder="Email" class="thin-writing white-text custom-input" />
                     </div>
                     <div class="input-field">
                         <input name="password" type="password" placeholder="Password" class="thin-writing white-text custom-input" />
