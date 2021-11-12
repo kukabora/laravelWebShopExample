@@ -28,7 +28,7 @@
                 @else
                 <h3 class="white-text big-spacing-text">Fill the form below</h3>
                 @endif
-                <form style="padding: 5%; display: block;" method="POST" action="logining">
+                <form style="padding: 5%; display: block;" method="POST" action="/api/auth/logining">
                     {{ csrf_field() }}
                     <div class="input-field">
                         <input name="login" type="email" placeholder="Email" class="thin-writing white-text custom-input" />

@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\FilteringApiController;
+use App\Http\Controllers\AuthenticationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +27,6 @@ Route::prefix('auth')->group(function () {
     Route::post('logining', [AuthenticationController::class, 'logining']);
 });
 
-
 Route::post('/goodsFilter', [FilteringApiController::class, 'filterGoods']);
+
+

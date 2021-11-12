@@ -20,7 +20,7 @@
 
             <div class="col s12 m5 center-align form-custom-control">
                 <h3 class="white-text big-spacing-text">Fill the form below</h3>
-                <form style="padding: 5%; display: block;" action="newUserRegister" method="POST">
+                <form style="padding: 5%; display: block;" action="/api/auth/newUserRegister" method="POST">
                     {{ csrf_field() }}
                     <div class="input-field">
                         <input name="login" type="text" placeholder="Login" class="thin-writing white-text custom-input" />

@@ -76,7 +76,9 @@
         </div>
     </div>
     @if ($goods)
-    @php
+    <div class="goods-list">
+
+        @php
     $i = 0
     @endphp
     @foreach ($goods as $good)
@@ -92,8 +94,8 @@
                 <h4>Country: England</h4>
                 <br />
                 <a href="#" class="custom-btn white-text find-out-btn">
-            Find out more!
-          </a>
+                    Find out more!
+                </a>
             </div>
         </div>
         <div class="col s12 m6 @if ($i%2==1) pull-l6 @endif">
@@ -104,6 +106,7 @@
     $i += 1
     @endphp
     @endforeach
+</div>
     @else
 
     @endif

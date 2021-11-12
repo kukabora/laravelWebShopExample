@@ -12,7 +12,7 @@ class FilteringApiController extends Controller
         if ($category_id == 0)
             $filtered_goods = Good::all();
         else
-        $filtered_goods = Good::select('select * from goods where category = '.$category_id);
-        return response()->json(print_r($filtered_goods), 200);
+            $filtered_goods = Good::where('category', $category_id)->get();
+        return response()->json($filtered_goods, 200);
     }
 }

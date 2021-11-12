@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageRendererController;
-use App\Http\Controllers\AuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +26,5 @@ Route::get('/billing', [PageRendererController::class, 'billingPage']);
 
 Route::get('/contacts', [PageRendererController::class, 'contactsPage']);
 
-Route::post('auth/newUserRegister', [AuthenticationController::class, 'newUserRegister']);
-Route::post('auth/logining', [AuthenticationController::class, 'logining']);
+
 
