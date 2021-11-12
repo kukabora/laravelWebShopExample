@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta class="csrf_token" name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
@@ -67,10 +68,10 @@
         <div class="white-text center-align">
             <h1 class="big-spacing-text">Find your style</h1>
             <div class="category-selection-panel">
-                <a href="#" class="clickable black-text active-custom-btn">All goods</a
+                <a href="#" filter_data="0" class="clickable black-text active-custom-btn">All goods</a
           >
-          <a href="#" class="clickable white-text custom-btn">Casual</a>
-                <a href="#" class="clickable white-text custom-btn">Sport</a>
+                <a href="#" filter_data="2" class="clickable white-text custom-btn">Casual</a>
+                <a href="#" filter_data="1" class="clickable white-text custom-btn">Sport</a>
             </div>
         </div>
     </div>

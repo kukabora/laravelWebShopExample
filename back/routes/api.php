@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\FilteringApiController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::prefix('auth')->group(function () {
+    Route::post('newUserRegister', [AuthenticationController::class, 'newUserRegister']);
+    Route::post('logining', [AuthenticationController::class, 'logining']);
+});
+
+
+Route::post('/goodsFilter', [FilteringApiController::class, 'filterGoods']);

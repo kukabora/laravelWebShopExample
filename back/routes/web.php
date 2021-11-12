@@ -15,12 +15,16 @@ use App\Http\Controllers\AuthenticationController;
 |
 */
 
+Route::prefix('auth')->group(function () {
+    Route::get('/register', [PageRendererController::class, 'signUpPage']);
+    Route::get('/login', [PageRendererController::class, 'signInPage']);
+});
+
 Route::get('/', [PageRendererController::class, 'mainPage']);
 Route::get('/cart', [PageRendererController::class, 'cartPage']);
 Route::get('/good', [PageRendererController::class, 'goodPage']);
 Route::get('/billing', [PageRendererController::class, 'billingPage']);
-Route::get('/auth/register', [PageRendererController::class, 'signUpPage']);
-Route::get('/auth/login', [PageRendererController::class, 'signInPage']);
+
 Route::get('/contacts', [PageRendererController::class, 'contactsPage']);
 
 Route::post('auth/newUserRegister', [AuthenticationController::class, 'newUserRegister']);

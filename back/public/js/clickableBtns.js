@@ -9,8 +9,13 @@ clickableBtns.forEach(btn => btn.onclick = (e) => {
     })
     e.target.classList.add("black-text")
     e.target.classList.add("active-custom-btn")
-    console.log(e.target.classList)
     e.target.classList.remove('white-text')
     e.target.classList.remove("custom-btn")
-    console.log(e.target.classList)
-})
+
+    let promise = await fetch("goodsFilter")
+    headers = {
+        'X-CSRF-TOKEN': document.querySelector(".csrf_token").getAttribute("content")
+    }
+    console.log(headers)
+
+});

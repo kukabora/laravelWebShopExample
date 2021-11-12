@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Storage;
 class PageRendererController extends Controller
 {
     public function mainPage(Request $req){
-        Storage::disk('local')->put('example.txt', 'Contents');
         $goods = Good::all();
         return view('index', ['goods' => $goods]);
     }
