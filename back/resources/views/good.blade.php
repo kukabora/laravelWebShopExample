@@ -100,7 +100,7 @@
                 <div class="additional-info center-align">
                     <br />
                     <div class="amount-data">
-                        <input type="number" min="1" value="1" name="" id="" class="amount-input browser-default" /><input type="submit" class="big-spacing-text submit-promo-btn" value="ADD TO CART" />
+                        <input type="number" min="1" value="1" name="" id="" class="amount-input browser-default" /><input type="submit" class="big-spacing-text submit-promo-btn" itemId="{{$good->id}}" value="ADD TO CART" />
                     </div>
                     <a href="#" class="buy-now-btn big-spacing-text">BUY NOW!</a>
                 </div>
@@ -146,7 +146,7 @@
         </div>
       </div>
     </footer>
-    <script src="{{ asset('js/clickableBtns.js') }}"></script>
+    <script src="{{ asset('js/toast.js') }}"></script>
     <script src="{{ asset('js/materialize.js') }}"></script>
     <script src="{{ asset('js/dropdown.js') }}"></script>
   </body>

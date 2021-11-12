@@ -2,6 +2,16 @@
     width: 100%;
 }
 
+.submit-promo-btn:hover {
+    cursor: pointer;
+}
+
+.submit-promo-btn:active {
+    transition: 0.1s;
+    background-color: black;
+    color: white;
+}
+
 .price {
     font-size: calc(1vw + 1em);
 }
