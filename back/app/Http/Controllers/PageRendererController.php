@@ -9,26 +9,28 @@ use Illuminate\Support\Facades\Storage;
 
 class PageRendererController extends Controller
 {
-    public function mainPage(Request $req){
+    public function mainPage(Request $request){
         $goods = Good::all();
         return view('index', ['goods' => $goods]);
     }
-    public function cartPage(Request $req){
+    public function cartPage(Request $request){
         return view('cart');
     }
-    public function signUpPage(Request $req){
+    public function signUpPage(Request $request){
         return view('sign-in');
     }
-    public function signInPage(Request $req){
+    public function signInPage(Request $request){
         return view('sign-up');
     }
-    public function billingPage(Request $req){
+    public function billingPage(Request $request){
         return view('billing');
     }
-    public function contactsPage(Request $req){
+    public function contactsPage(Request $request){
         return view('contacts');
     }
-    public function goodPage(Request $req){
-        return view('good');
+    public function goodPage(Request $request){
+        $good_id = $request->good_id;
+        $good = Good::where('id', $good_id)->first();
+        return view('good', ['good' => $good]);
     }
 }

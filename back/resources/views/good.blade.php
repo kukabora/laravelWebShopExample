@@ -62,19 +62,19 @@
             <br />
         </div>
     </div>
-
+    @if ($good)
     <div class="row">
         <div class="col s12 m6">
-            <img src="{{ asset('media/img/backpacks/OGIO SOHO WOMEN’S BACKPACK – YELLOW - 960x960.png') }}" class="backpack-photo left" alt="" />
+            <img src="{{ asset('storage/goodsImages/'.$good->image_field) }}" class="backpack-photo left" alt="" />
         </div>
         <div class="col s12 m6 white-text">
             <div class="container">
-                <h5 class="big-spacing-text">OGIO SOHO WOMEN'S BACKPACK</h5>
+                <h5 class="big-spacing-text">{{ $good->good_name }}</h5>
                 <h6 class="grey-text big-spacing-text">
-                    Includes 1x OGIO SOHO WOMEN'S BACKPACK
+                    Includes 1x {{ $good->good_name }}
                 </h6>
                 <div class="price-and-rating-section">
-                    <span class="price left"><s>$699</s> $559</span>
+                    <span class="price left">{{ $good->price }}$</span>
                     <img src="{{ asset('img/rating.png') }}" alt="" class="right rating" />
                     <span class="grey-text right amount-of-rates">1,424 reviews</span>
                 </div>
@@ -83,65 +83,17 @@
                 <div class="additional-info">
                     <h5 class="big-spacing-text white-text">SIZE</h5>
                     <br />
-                    <button class="
-                hoverable
-                browser-default
-                option-btn
-                big-spacing-text
-                center-align
-              ">
-              XL
-            </button>
-                    <button class="
-                hoverable
-                browser-default
-                option-btn
-                big-spacing-text
-                center-align
-              ">
-              L
-            </button>
-                    <button class="
-                hoverable
-                browser-default
-                option-btn
-                big-spacing-text
-                center-align
-              ">
-              M
-            </button>
+                    <button class=" hoverable browser-default option-btn big-spacing-text center-align "> XL </button>
+                    <button class=" hoverable browser-default option-btn big-spacing-text center-align "> L </button>
+                    <button class=" hoverable browser-default option-btn big-spacing-text center-align "> M </button>
                 </div>
                 <hr />
                 <div class="additional-info">
                     <h5 class="big-spacing-text white-text">COLOR</h5>
                     <br />
-                    <button class="
-                hoverable
-                browser-default
-                option-btn
-                big-spacing-text
-                center-align
-              ">
-              BLACK
-            </button>
-                    <button class="
-                hoverable
-                browser-default
-                option-btn
-                big-spacing-text
-                center-align
-              ">
-              YELLOW
-            </button>
-                    <button class="
-                hoverable
-                browser-default
-                option-btn
-                big-spacing-text
-                center-align
-              ">
-              WHITE
-            </button>
+                    <button class=" hoverable browser-default option-btn big-spacing-text center-align "> BLACK </button>
+                    <button class=" hoverable browser-default option-btn big-spacing-text center-align "> YELLOW </button>
+                    <button class=" hoverable browser-default option-btn big-spacing-text center-align "> WHITE </button>
                 </div>
                 <hr />
                 <h5 class="big-spacing-text white-text">AMOUNT</h5>
@@ -155,6 +107,12 @@
             </div>
         </div>
     </div>
+    @else
+        <div class="container center-align">
+            <h1 class="white-text">We have no such an item in our shop</h1>
+        </div>
+    @endif
+
     <footer class="page-footer black white-text" style="border-top: 1px solid grey">
         <div class="container">
             <div class="row">
