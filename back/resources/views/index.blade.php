@@ -75,9 +75,12 @@
         </div>
     </div>
     @if ($goods)
+    @php
+    $i = 0
+    @endphp
     @foreach ($goods as $good)
     <div class="row">
-        <div class="col s12 m6 white-text push-l6">
+        <div class="col s12 m6 white-text @if ($i%2==1) push-l6 @endif">
             <div class="container">
                 <h1>{{$good->title}}</h1>
                 <h6>
@@ -92,34 +95,17 @@
           </a>
             </div>
         </div>
-        <div class="col s12 m6 pull-l6">
-            <img src="{{ url('storage/app/public/goodsImages/'.$good->image_field) }}" class="backpack-photo left mirrored" alt="" />
+        <div class="col s12 m6 @if ($i%2==1) pull-l6 @endif">
+            <img src="{{ asset('storage/goodsImages/'.$good->image_field) }}" class="backpack-photo left @if ($good->inverted_picture) mirrored @endif" alt="" />
         </div>
     </div>
+    @php
+    $i += 1
+    @endphp
     @endforeach
     @else
 
     @endif
-    <div class="row">
-        <div class="col s12 m6 white-text push-l6">
-            <div class="container">
-                <h1>Scholar courier</h1>
-                <h6>
-                    Excellent choice for your child. Just imagine him/her walking down the school corridor with this piece of art on his back. Perfect match with young wonderkid.
-                </h6>
-                <h4>Price: <s>849$</s> 759$</h4>
-                <h4>Manufacturer: Scott Black</h4>
-                <h4>Country: England</h4>
-                <br />
-                <a href="#" class="custom-btn white-text find-out-btn">
-            Find out more!
-          </a>
-            </div>
-        </div>
-        <div class="col s12 m6 pull-l6">
-            <img src="{{ asset('media/img/backpacks/Scott School Bag - 960x960.png') }}" class="backpack-photo left mirrored" alt="" />
-        </div>
-    </div>
     <footer class="page-footer black white-text" style="border-top: 1px solid grey">
         <div class="container">
             <div class="row">
