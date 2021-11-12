@@ -39,4 +39,9 @@ class AuthenticationController extends Controller
             return back()->withInput(["err" => 'invalid login or password']);
         }
     }
+
+    public function loggingOut(Request $request){
+        Auth::logout();
+        return redirect('');
+    }
 }

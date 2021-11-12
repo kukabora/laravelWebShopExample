@@ -29,5 +29,6 @@ Route::prefix('auth')->group(function () {
 });
 
 Route::post('/goodsFilter', [FilteringApiController::class, 'filterGoods']);
+
 Route::post('/addToCart', [CartApiController::class, 'addToCart']);
 

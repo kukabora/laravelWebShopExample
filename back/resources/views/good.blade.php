@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta class="csrf_token" name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/materialize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/good.css') }}" />
@@ -146,8 +147,8 @@
         </div>
       </div>
     </footer>
-    <script src="{{ asset('js/toast.js') }}"></script>
     <script src="{{ asset('js/materialize.js') }}"></script>
+    <script src="{{ asset('js/toast.js') }}"></script>
     <script src="{{ asset('js/dropdown.js') }}"></script>
   </body>
 </html>

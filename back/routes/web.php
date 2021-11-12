@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageRendererController;
+use App\Http\Controllers\AuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ use App\Http\Controllers\PageRendererController;
 Route::prefix('auth')->group(function () {
     Route::get('/register', [PageRendererController::class, 'signUpPage']);
     Route::get('/login', [PageRendererController::class, 'signInPage']);
+    Route::get('/logout', [AuthenticationController::class, 'loggingOut']);
+
 });
 
 Route::get('/', [PageRendererController::class, 'mainPage']);
