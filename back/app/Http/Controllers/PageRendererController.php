@@ -19,7 +19,7 @@ class PageRendererController extends Controller
     }
     public function cartPage(Request $request){
         $user = Auth::user();
-        $context = ["billingInfo" => BillingInfo::where("owner", Auth::id())->first()];
+        $context = ["billingInfo" => BillingInfo::where("owner_id", Auth::id())->first()];
         $cart = Cart::where('owner_id', Auth::id())->first();
         if ($cart === null || $cart->items == "" || $cart->items == " ")
             return view('cart', ["msg" => "First thing first, you need to add something to your cart!", "items" => []]);

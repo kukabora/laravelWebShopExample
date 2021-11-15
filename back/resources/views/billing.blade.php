@@ -96,6 +96,10 @@
                             <label for="code" class="input-label black-text">Postal code <span class="red-text">*</span></label>
                             <input type="text" required name="code" id="code" class="billing-adress-input" placeholder="Type here">
                         </div>
+                        <div class="col s12">
+                            <label for="apartment" class="input-label black-text">Apartment number <span class="red-text">*</span></label>
+                            <input type="text" required name="apartment" id="apartment" class="billing-adress-input" placeholder="Type here">
+                        </div>
                     </div>
                 </div>
             </li>
@@ -156,6 +160,10 @@
                                 <input type="text" name="cc_date" id="" class="browser-default valid-thru-field card-input " placeholder="Valid Thru">
                                 <input type="text" name="cc_holder" id="" class="browser-default name-field card-input " placeholder="Holder name">
                             </div>
+                        </div>
+                        <div class="col s12">
+                            <label for="cc_code">Enter your credit card CVC code on back side</label>
+                            <input type="text" name="cc_code" id="cc_code" class="" placeholder="Type here">
                         </div>
                     </div>
                 </div>

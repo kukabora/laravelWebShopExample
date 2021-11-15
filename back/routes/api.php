@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\FilteringApiController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\ServiceApiController;
 
@@ -29,7 +28,7 @@ Route::prefix('auth')->group(function () {
     Route::get('logout', [AuthenticationController::class, 'loggingOut']);
 });
 
-Route::post('/goodsFilter', [FilteringApiController::class, 'filterGoods']);
+Route::post('/goodsFilter', [ServiceApiController::class, 'filterGoods']);
 
 Route::post('/addToCart', [ServiceApiController::class, 'addToCart']);
 Route::post('/addBillingInfo', [ServiceApiController::class, 'addBillingInfo']);
