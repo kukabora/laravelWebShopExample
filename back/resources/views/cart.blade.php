@@ -175,7 +175,7 @@
                     @if ($billingInfo === null)
                     <a href="billing" class="btn hoverable browser-default checkout-btn big-spacing-text center-align ">CHECKOUT</a>
                     @else
-                    <a href="placedOrder" class="btn hoverable browser-default checkout-btn big-spacing-text center-align ">CHECKOUT</a>
+                    <a href="api/placeOrder" class="btn hoverable browser-default checkout-btn big-spacing-text center-align ">CHECKOUT</a>
                     @endif
                 </div>
                 <br />

@@ -32,3 +32,4 @@ Route::post('/goodsFilter', [ServiceApiController::class, 'filterGoods']);
 
 Route::post('/addToCart', [ServiceApiController::class, 'addToCart']);
 Route::post('/addBillingInfo', [ServiceApiController::class, 'addBillingInfo']);
+Route::post('/placeOrder', [ServiceApiController::class, 'placeOrder']);

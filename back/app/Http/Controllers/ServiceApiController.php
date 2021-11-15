@@ -75,6 +75,13 @@ class ServiceApiController extends Controller
             'cc_number' => $cc_number,
             'cc_holder' => $cc_holder
         ]);
-        return response()->json(["msg" => 'OK'], 200);
+        return redirect('/cart');
     }
+
+    public function placeOrder(Request $request){
+
+        return response()->json(["msg" => "YES YES VERY NICE"], 200);
+    }
+
+
 }
