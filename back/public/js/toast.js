@@ -13,12 +13,13 @@ cartBtn.onclick = async(e) => {
         },
         method: 'post',
         body: JSON.stringify({
-            "category_id": item_id,
+            "item_id": item_id,
+            "amount": document.querySelector(".amount-input").value
         })
     }
     let promise = await fetch(url, requestData);
     let data = await promise.json();
     console.log(data);
-    M.toast({ html: data });
+    M.toast({ html: data.message });
 
 }
