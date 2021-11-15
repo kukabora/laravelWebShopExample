@@ -65,12 +65,14 @@
 
     <div class="container" style="margin-bottom: 5%">
         <h1 class="white-text center-align">A few more steps until we place your order</h1>
+        <form action="api/addBillingInfo" method="POST">
         <ul class="collapsible">
             <li>
                 <div class="collapsible-header black-text info-header big-spacing-text">1. Billing address</div>
                 <div class="collapsible-body white">
-                    <div class="row">
-                        <div class="col s12 m6">
+
+                        <div class="row">
+                            <div class="col s12 m6">
                             <label for="fname" class="input-label black-text">First name <span class="red-text">*</span></label>
                             <input type="text" required name="fname" id="fname" class="billing-adress-input" placeholder="Type here">
                         </div>
@@ -105,7 +107,7 @@
                     <div class="row">
                         <div class="col s12 m6">
                             <label class="input-label">Shipping select</label>
-                            <select class="browser-default">
+                            <select class="browser-default" name="shippingMethod">
                                 <option value="" disabled selected>Choose your option</option>
                                 <option value="1">Air</option>
                                 <option value="2">Sea-shipping</option>
@@ -115,7 +117,7 @@
                         </div>
                         <div class="col s12 m6">
                             <label class="input-label">Company select</label>
-                            <select class="browser-default">
+                            <select class="browser-default" name="shippingComp">
                                 <option value="" disabled selected>Company</option>
                                 <option value="1">FedEX</option>
                                 <option value="2">DMS</option>
@@ -136,7 +138,7 @@
 
                         <div class="col s12 m6">
                             <label class="input-label">Credit card type</label>
-                            <select class="browser-default">
+                            <select class="browser-default" name="cctype">
                                 <option value="" disabled selected>Type</option>
                                 <option value="1">MasterCard</option>
                                 <option value="2">VISA</option>
@@ -150,16 +152,17 @@
                                 <div class="card-info">
                                     <h5>Credit card info</h5>
                                 </div>
-                                <input type="text" name="" id="" class="browser-default card-number-input card-input " placeholder="Card code">
-                                <input type="text" name="" id="" class="browser-default valid-thru-field card-input " placeholder="Valid Thru">
-                                <input type="text" name="" id="" class="browser-default name-field card-input " placeholder="Holder name">
+                                <input type="text" name="cc_number" id="" class="browser-default card-number-input card-input " placeholder="Card code">
+                                <input type="text" name="cc_date" id="" class="browser-default valid-thru-field card-input " placeholder="Valid Thru">
+                                <input type="text" name="cc_holder" id="" class="browser-default name-field card-input " placeholder="Holder name">
                             </div>
                         </div>
                     </div>
-                </span></div>
+                </div>
             </li>
         </ul>
-        <button class="btn red darken-4 white-text center-align">Save information</button>
+        <button type="submit" class="btn red darken-4 white-text center-align">Save information</button>
+    </form>
     </div>
     <footer class="page-footer black white-text" style="border-top: 1px solid grey">
         <div class="container">

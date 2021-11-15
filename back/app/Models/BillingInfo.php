@@ -9,6 +9,7 @@ class BillingInfo extends Model
 {
     protected $table = 'billinginfos';
     protected $fillable = [
+        'owner',
         'fname',
         'lname',
         'country',

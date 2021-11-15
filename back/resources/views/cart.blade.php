@@ -62,90 +62,58 @@
             @endauth
         </div>
     </div>
-    <h5 class="white-text big-spacing-text" style="margin: 5%">
-        My shopping cart
-    </h5>
-    <div class="row">
-        <div class="col s12 m8">
-            <div class="row">
-                <div class="col s5 center-align white-text" style="font-size: calc(0.8vw + 0.8em)">
-                    Product
+                @if ($items)
+                @php
+                 $total = 0;
+                @endphp
+                <h5 class="white-text big-spacing-text" style="margin: 5%">
+                    My shopping cart
+                </h5>
+                <div class="row">
+                    <div class="col s12 m8">
+                        <div class="row">
+                            <div class="col s5 center-align white-text" style="font-size: calc(0.8vw + 0.8em)">
+                                Product
+                            </div>
+                            <div class="col s4 center-align white-text" style="font-size: calc(0.8vw + 0.8em)">
+                                Price
+                            </div>
+                            <div class="col s3 center-align white-text" style="font-size: calc(0.8vw + 0.8em)">
+                                Color
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col s4 center-align white-text" style="font-size: calc(0.8vw + 0.8em)">
-                    Price
-                </div>
-                <div class="col s3 center-align white-text" style="font-size: calc(0.8vw + 0.8em)">
-                    Color
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr style="margin: 0" />
-    <div class="row" style="margin-bottom: 0">
-        <div class="col s12 m8">
-            <div class="custom-cartlist-container">
+                <hr style="margin: 0" />
+                <div class="row" style="margin-bottom: 0">
+                    <div class="col s12 m8">
+                        <div class="custom-cartlist-container">
+                @foreach ($items as $item)
                 <div class="row cart-element valign-wrapper">
                     <div class="col s12 m3">
                         <a href="good">
-                            <img src="{{ asset('media/img/backpacks/Backpack Outdoor - 960x960 (2).png') }}" alt="" class="preview" />
+                            <img src="storage/goodsImages/{{$item['image_field']}}" alt="" class="preview" />
                         </a>
                     </div>
                     <div class="col s12 m3 white-text">
                         <p class="big-spacing-text">
                             <a href="good" class="white-text">
-                                <b>Scott Black OutDoor Adventure (80L)</b>
+                                <b>{{$item['good_name']}}</b>
                             </a>
                         </p>
                     </div>
                     <div class="col s12 m3 white-text">
-                        <p class="big-spacing-text"><s>899$</s> <b>759$</b></p>
+                        <p class="big-spacing-text"><b>{{$item['price']}}$</b></p>
                     </div>
                     <div class="col s12 m3 white-text">
-                        <p class="big-spacing-text"><b>Grey + Purple</b></p>
+                        <p class="big-spacing-text"><b>Black</b></p>
                     </div>
                 </div>
                 <hr />
-                <div class="row cart-element valign-wrapper">
-                    <div class="col s12 m3">
-                        <a href="good">
-                            <img src="{{ asset('media/img/backpacks/Backpack Outdoor - 960x960 (2).png') }}" alt="" class="preview" />
-                        </a>
-                    </div>
-                    <div class="col s12 m3 white-text">
-                        <p class="big-spacing-text">
-                            <a href="good" class="white-text">
-                                <b>Scott Black OutDoor Adventure (80L)</b>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col s12 m3 white-text">
-                        <p class="big-spacing-text"><s>899$</s> <b>759$</b></p>
-                    </div>
-                    <div class="col s12 m3 white-text">
-                        <p class="big-spacing-text"><b>Grey + Purple</b></p>
-                    </div>
-                </div>
-                <hr />
-                <div class="row cart-element valign-wrapper">
-                    <div class="col s12 m3">
-                        <a href="good">
-                            <img src="{{ asset('media/img/backpacks/Backpack Outdoor - 960x960 (2).png') }}" alt="" class="preview" />
-                        </a>
-                    </div>
-                    <div class="col s12 m3 white-text">
-                        <p class="big-spacing-text">
-                            <a href="good" class="white-text">
-                                <b>Scott Black OutDoor Adventure (80L)</b>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col s12 m3 white-text">
-                        <p class="big-spacing-text"><s>899$</s> <b>759$</b></p>
-                    </div>
-                    <div class="col s12 m3 white-text">
-                        <p class="big-spacing-text"><b>Grey + Purple</b></p>
-                    </div>
-                </div>
+                @php
+                    $total += $item['price'];
+                @endphp
+                @endforeach
             </div>
         </div>
         <div class="col s12 m4 white-text">
@@ -170,7 +138,7 @@
                 <div class="checkout-information-element-wrapper">
                     <h6 class="big-spacing-text white-text">
                         <span class="left">SUBTOTAL</span
-              ><span class="right grey-text">759$</span>
+              ><span class="right grey-text">{{$total}}$</span>
                     </h6>
                 </div>
                 <br />
@@ -195,7 +163,7 @@
                 <div class="checkout-information-element-wrapper">
                     <h6 class="big-spacing-text white-text">
                         <span class="left">ESTIMATED TOTAL</span
-              ><span class="right grey-text">759$</span>
+              ><span class="right grey-text">{{$total}}$</span>
                     </h6>
                 </div>
                 <br />
@@ -204,20 +172,22 @@
                 </div>
                 <br />
                 <div class="checkout-information-element-wrapper">
-                    <button class="
-                hoverable
-                browser-default
-                checkout-btn
-                big-spacing-text
-                center-align
-              ">
-              CHECKOUT
-            </button>
+                    @if ($billingInfo === null)
+                    <a href="billing" class="btn hoverable browser-default checkout-btn big-spacing-text center-align ">CHECKOUT</a>
+                    @else
+                    <a href="placedOrder" class="btn hoverable browser-default checkout-btn big-spacing-text center-align ">CHECKOUT</a>
+                    @endif
                 </div>
                 <br />
             </div>
         </div>
     </div>
+                @else
+                    <h1 class="white-text">
+                        {{$msg}}
+                    </h1>
+                @endif
+
 
     <footer class="page-footer black white-text" style="border-top: 1px solid grey">
         <div class="container">

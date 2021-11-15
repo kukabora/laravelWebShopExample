@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\FilteringApiController;
 use App\Http\Controllers\AuthenticationController;
-use App\Http\Controllers\CartApiController;
+use App\Http\Controllers\ServiceApiController;
 
 
 /*
@@ -31,5 +31,5 @@ Route::prefix('auth')->group(function () {
 
 Route::post('/goodsFilter', [FilteringApiController::class, 'filterGoods']);
 
-Route::post('/addToCart', [CartApiController::class, 'addToCart']);
-
+Route::post('/addToCart', [ServiceApiController::class, 'addToCart']);
+Route::post('/addBillingInfo', [ServiceApiController::class, 'addBillingInfo']);

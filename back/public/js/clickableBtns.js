@@ -57,7 +57,7 @@ clickableBtns.forEach(btn => btn.onclick = async e => {
             <h4>Manufacturer: Scott Black</h4>
             <h4>Country: England</h4>
             <br />
-            <a href="#" class="custom-btn white-text find-out-btn">
+            <a href="` + "good?good_id=" + response[i].id + `" class="custom-btn white-text find-out-btn">
             Find out more!
             </a>
             </div>

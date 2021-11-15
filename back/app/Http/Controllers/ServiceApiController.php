@@ -7,7 +7,7 @@ use App\Models\Good;
 use App\Models\Cart;
 use Illuminate\Support\Facades\Auth;
 
-class CartApiController extends Controller
+class ServiceController extends Controller
 {
     public function addToCart(Request $request){
         $user = Auth::user();
@@ -31,5 +31,10 @@ class CartApiController extends Controller
             $data = ["status" => "OK", "message"=> "Added to your cart!"];
         }
         return response()->json($data, 200);
+    }
+
+
+    public function addBillingInfo(Request $request){
+        return response()->json(["msg" => 'OK'], 200);
     }
 }
