@@ -55,7 +55,7 @@
                         <li class="dropdown-link-item">
                             <a href="#!" class="dropdown-link">Messages <i class="material-icons right">message</i></a>
                         </li>
-                        <li class="dropdown-link-item"><a href="#!" class="dropdown-link">Log Out <i class="material-icons right">exit_to_app</i></a></li>
+                        <li class="dropdown-link-item"><a href="api/auth/logout" class="dropdown-link">Log Out <i class="material-icons right">exit_to_app</i></a></li>
                     </ul>
                 </div>
             </div>
@@ -107,8 +107,6 @@
     @endphp
     @endforeach
 </div>
-    @else
-
     @endif
     <footer class="page-footer black white-text" style="border-top: 1px solid grey">
         <div class="container">

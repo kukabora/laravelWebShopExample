@@ -26,6 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix('auth')->group(function () {
     Route::post('newUserRegister', [AuthenticationController::class, 'newUserRegister']);
     Route::post('logining', [AuthenticationController::class, 'logining']);
+    Route::get('logout', [AuthenticationController::class, 'loggingOut']);
 });
 
 Route::post('/goodsFilter', [FilteringApiController::class, 'filterGoods']);

@@ -18,7 +18,6 @@ use App\Http\Controllers\AuthenticationController;
 Route::prefix('auth')->group(function () {
     Route::get('/register', [PageRendererController::class, 'signUpPage']);
     Route::get('/login', [PageRendererController::class, 'signInPage']);
-    Route::get('/logout', [AuthenticationController::class, 'loggingOut']);
 
 });
 
