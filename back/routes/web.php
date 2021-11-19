@@ -25,6 +25,7 @@ Route::get('/', [PageRendererController::class, 'mainPage']);
 Route::get('/cart', [PageRendererController::class, 'cartPage']);
 Route::get('/good', [PageRendererController::class, 'goodPage']);
 Route::get('/billing', [PageRendererController::class, 'billingPage']);
+Route::get('/finishedOrder', [PageRendererController::class, 'finishedOrder']);
 
 Route::get('/contacts', [PageRendererController::class, 'contactsPage']);
 

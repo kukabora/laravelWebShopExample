@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Good;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Cart;
+use App\Models\Order;
 use App\Models\BillingInfo;
 
 
@@ -16,6 +17,21 @@ class PageRendererController extends Controller
     public function mainPage(Request $request){
         $goods = Good::all();
         return view('index', ['goods' => $goods]);
+    }
+    public function finishedOrder(Request $request){
+        $cart = Cart::where('owner_id', Auth::id())->first();
+        if ($cart === null || $cart->items == "" || $cart->items == " "){
+            $items = [];
+            $itemIds = explode(" ", $cart->items);
+            for ($i=0;$i<count($itemIds);$i++){
+                $items[$i] = Good::where("id", $itemIds[$i])->first();
+            }
+
+        }
+        else {
+
+        }
+        return view('finishedOrder');
     }
     public function cartPage(Request $request){
         $user = Auth::user();
